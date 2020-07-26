@@ -1,7 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-#g = nx.PlanarEmbedding()
 g = nx.DiGraph()
 g.add_nodes_from([1,2,3,4,5,6,7,8,9,10,11])
 g.add_edge(1,2)
@@ -22,7 +21,10 @@ g.add_edge(9,11)
 g.add_edge(11,4)
 g.add_edge(11,4)
 
-nx.draw(g,with_labels=True)
-plt.draw()
+plt.figure().suptitle("Planar Layout")
+nx.draw_planar(g,with_labels=True)
+plt.figure().suptitle("Circular Layout")
+nx.draw_circular(g,with_labels=True)
+plt.figure().suptitle("Kamada-Kawai force-directed Layout")
+nx.draw_kamada_kawai(g,with_labels=True)
 plt.show()
-
