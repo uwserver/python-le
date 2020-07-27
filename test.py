@@ -29,7 +29,7 @@ edge_labels={
     ("j", "i"): ["17"],
     ("k", "g"): ["18","19", "20"]}
 
-tree={2, 6,7,9,14,11,13,15,17,18}
+tree={1,6,7,9,10,11,12,15,17,18}
 
 plt.figure().suptitle("Pretty Layout")
 plt.axis('off')
